@@ -4,7 +4,9 @@
   imports = [
     ./wireless.nix
     ./users.nix
+
     ./services/openssh.nix
+    ./services/vsftpd.nix
 
     ./nix/binaryCaches.nix
     ./nix/flakes.nix
