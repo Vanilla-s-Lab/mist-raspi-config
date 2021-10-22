@@ -15,5 +15,6 @@
     fsType = "ext4";
   };
 
+  networking.hostName = "MIST-Raspi";
   boot.kernelPackages = pkgs.linuxPackages_zen;
 }
