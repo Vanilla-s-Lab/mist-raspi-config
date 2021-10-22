@@ -2,7 +2,7 @@
 {
   sdImage.compressImage = false;
   imports = [
-    ./networking/wireless.nix
+    ./wireless.nix
     ./users.nix
     ./services/openssh.nix
 
