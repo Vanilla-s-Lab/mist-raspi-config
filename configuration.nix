@@ -5,6 +5,9 @@
     ./networking/wireless.nix
     ./users.nix
     ./services/openssh.nix
+
+    ./nix/binaryCaches.nix
+    ./nix/flakes.nix
   ];
 
   fileSystems."/" = {
