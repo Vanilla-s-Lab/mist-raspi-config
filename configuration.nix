@@ -4,6 +4,7 @@
   imports = [
     ./wireless.nix
     ./users.nix
+    ./boot.nix
 
     ./services/openssh.nix
     ./services/vsftpd.nix
@@ -18,5 +19,6 @@
   };
 
   networking.hostName = "MIST-Raspi";
-  boot.kernelPackages = pkgs.linuxPackages_zen;
+  hardware.raspberry-pi."4".audio.enable = true;
+  hardware.raspberry-pi."4".fkms-3d.enable = true;
 }

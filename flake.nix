@@ -5,9 +5,10 @@
     deploy-rs.url = "github:serokell/deploy-rs";
   };
 
-  outputs = { self, nixpkgs, nixos-hardware, deploy-rs, ... }: rec {
-    nixosConfigurations."MIST-Raspi" = nixpkgs.lib.nixosSystem {
+  outputs = { self, nixpkgs, nixos-hardware, deploy-rs, ... }@inputs: rec {
+    nixosConfigurations."MIST-Raspi" = nixpkgs.lib.nixosSystem rec {
       system = "aarch64-linux";
+      specialArgs = { inherit inputs system; };
       modules = [
         ./configuration.nix
         nixos-hardware.nixosModules.raspberry-pi-4
